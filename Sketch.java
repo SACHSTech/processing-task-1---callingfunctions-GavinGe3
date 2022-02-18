@@ -49,12 +49,18 @@ public class Sketch extends PApplet {
     fill(255,255,255);
     ellipse(210, 262, 30,30);
     ellipse(390, 262, 30,30);
-    
+
 
     // Draw panda nose
     fill(0,0,0);
     ellipse(300, 375, 75, 40);
-    
+
+    // Draw 
+    fill(247,202,213);
+    strokeWeight(0);
+    ellipse(165, 380, 60, 35);
+    ellipse(435, 380, 60, 35);
+
     // Draw "Whiskers"
     noFill();
     strokeWeight(8);
