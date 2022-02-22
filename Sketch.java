@@ -1,73 +1,92 @@
 import processing.core.PApplet;
+/**
+   * Description: This program draws a panda using processing
+   * Author: G. Ge
+   */
 
 public class Sketch extends PApplet {
 	
-	
-  /**
-   * Called once at the beginning of execution, put your size all in this method
-   */
   public void settings() {
-	// put your size call here
     size(600, 600);
   }
 
-  /** 
-   * Called once at the beginning of execution.  Add initial set up
-   * values here i.e background, stroke, fill etc.
-   */
   public void setup() {
-    background(139,231,139);
-  
+    background(52, 118, 7);
   }
 
-  /**
-   * Called repeatedly, anything drawn to the screen goes here
-   */
   public void draw() {
 	  
-    // Set stroke weight and initial color  
+    // Set initial stroke weight  
         
     strokeWeight(4);
-    fill(0,0,0);
     
+    // Draw background bamboo
+    fill(181, 211, 61);
+    rect(30, 0, 45, 600);
+    rect(160, 0, 45, 600);
+    rect(280, 0, 45, 600);
+    rect(400, 0, 45, 600);
+    rect(520, 0, 45, 600);
+    
+    // Left side bamboo lines
+    line(30, 100, 75, 110);
+    line(30, 250, 75, 230);
+    line(30, 400, 75, 420);
+    line(30, 550, 75, 570);
+
+    // right side bamboo lines
+    line(520, 100, 565, 90);
+    line(520, 260, 565, 245);
+    line(520, 410, 565, 425);
+    line(520, 545, 565, 540);
+
+    // central bamboo lines
+    line(160, 50, 205, 65);
+    line(280, 55, 325, 58);
+    line(400, 44, 445, 28);
+
+    line(160, 501, 205, 491);
+    line(280, 550, 325, 557);
+    line(400, 510, 445, 530);
+
     // Draw panda ears
-    arc(175, 180, 200, 200, HALF_PI + QUARTER_PI, PI + HALF_PI + QUARTER_PI + radians(5), OPEN);
-    arc(425, 180, 200, 200, PI + QUARTER_PI - radians(5), PI + PI + QUARTER_PI, OPEN);
+    fill(0, 0, 0);
+    arc(175, 180, 200, 200, radians(135), radians(320), OPEN);
+    arc(425, 180, 200, 200, radians(220), radians(405), OPEN);
 
     // Draw panda face
-    fill(255,255,255);
+    fill(255, 255, 255);
     ellipse(300, 300, 450, 375);  
     
     // Draw Panda Eyes
-    fill(0,0,0);
-    arc(200, 295, 150, 150, HALF_PI + QUARTER_PI + radians(14), PI + HALF_PI + QUARTER_PI-radians(14), OPEN);
-    arc(175, 270, 150, 150, radians(-32), HALF_PI + QUARTER_PI - radians(13), OPEN);
+    fill(0, 0, 0);
+    
+    arc(200, 285, 150, 150, radians(149), radians(301), OPEN);
+    arc(175, 260, 150, 150, radians(-32), radians(122), OPEN);
 
-    arc(400, 295, 150, 150, PI + QUARTER_PI + radians(14), PI + PI+QUARTER_PI - radians(14), OPEN);
-    arc(425, 270, 150, 150, HALF_PI + radians(-32), PI+QUARTER_PI - radians(13), OPEN);
+    arc(400, 285, 150, 150, radians(239), radians(391), OPEN);
+    arc(425, 260, 150, 150, radians(58), radians(212), OPEN);
 
-    fill(255,255,255);
-    ellipse(210, 262, 30,30);
-    ellipse(390, 262, 30,30);
-
+    fill(255, 255, 255);
+    ellipse(210, 252, 30, 30);
+    ellipse(390, 252, 30, 30);
 
     // Draw panda nose
-    fill(0,0,0);
+    fill(0, 0, 0);
     ellipse(300, 375, 75, 40);
 
-    // Draw 
-    fill(247,202,213);
+    // Draw Cheeks
+    fill(247, 202, 213);
     strokeWeight(0);
     ellipse(165, 380, 60, 35);
     ellipse(435, 380, 60, 35);
 
     // Draw "Whiskers"
-    noFill();
     strokeWeight(8);
     line(300, 375, 300, 405);
-    arc(275, 405, 50, 40, 0, HALF_PI + QUARTER_PI);
-    arc(325, 405, 50, 40, QUARTER_PI, PI);
-     
+    noFill();
+    arc(275, 405, 50, 40, 0, radians(135));
+    arc(325, 405, 50, 40, radians(45), radians(180));
   }
   
   // define other methods down here.
