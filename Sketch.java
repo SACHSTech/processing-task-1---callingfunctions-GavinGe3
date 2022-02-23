@@ -1,7 +1,7 @@
 import processing.core.PApplet;
 /**
-   * Description: This program draws a panda face using processing
-   * @Author: G. Ge
+   * This program draws a panda face using processing
+   * @author: G. Ge
    */
 
 public class Sketch extends PApplet {
@@ -27,19 +27,15 @@ public class Sketch extends PApplet {
     rect(400, 0, 45, 600);
     rect(520, 0, 45, 600);
     
-    // Draw Left side bamboo horizontal lines
+    // Draw Bamboo Horizontal Lines
     line(30, 100, 75, 110);
     line(30, 250, 75, 230);
     line(30, 400, 75, 420);
     line(30, 550, 75, 570);
-
-    // Draw right side bamboo horizontal lines
     line(520, 100, 565, 90);
     line(520, 260, 565, 245);
     line(520, 410, 565, 425);
     line(520, 545, 565, 540);
-
-    // Draw central bamboo horizontal lines
     line(160, 50, 205, 65);
     line(280, 55, 325, 58);
     line(400, 44, 445, 28);
@@ -47,11 +43,11 @@ public class Sketch extends PApplet {
     line(280, 550, 325, 557);
     line(400, 510, 445, 530);
 
-    // Draw panda ears
+    // Draw panda ears 
     fill(0, 0, 0);
     arc(175, 180, 200, 200, radians(135), radians(320), OPEN);
     arc(425, 180, 200, 200, radians(220), radians(405), OPEN);
-
+    
     // Draw panda face
     fill(255, 255, 255);
     ellipse(300, 300, 450, 375);  
@@ -68,7 +64,7 @@ public class Sketch extends PApplet {
     ellipse(210, 252, 30, 30);
     ellipse(390, 252, 30, 30);
 
-    // Draw panda nose
+    // Draw panda nose 
     fill(0, 0, 0);
     ellipse(300, 375, 75, 40);
 
